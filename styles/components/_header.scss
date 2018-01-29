@@ -5,11 +5,8 @@
         display: flex;
         justify-content: space-around;
         padding: 20px 0;
+        font-size: 12px;
     }
-}
-
-.genius-logo img{
-
 }
 
 .contact,
@@ -19,21 +16,56 @@
     align-items: center;
 }
 
+.genius-logo{
+    margin-right: 80px;
+}
+
 .contact i,
 .contact p{
     margin-left: 10px;
 }
 
-.user-controls p:first-child{
-    padding-right: 20px;
-    border-right: 1px solid white;
+.user-controls a + a{
+    padding-left: 20px;
+    border-left: 1px solid white;
 }
-
-
 
 .user-controls a{
+    padding-right: 20px;
+    margin: 0;
     color: white;
 }
+
+.user-controls a p{
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    .logo-bar .wrapper{
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    .genius-logo{
+        display: inline-block;
+    }
+
+    .genius-logo{
+        align-items: initial;
+    }
+
+     .contact,
+     .user-controls{
+        order: 2;
+        align-self: flex-end;
+    }
+}
+
+
+// Main Navigation
+
+
 .main-nav{
     border-top: 1px solid black;
 }
@@ -56,8 +88,10 @@
 }
 
 .hero-section{
-    height: 90vh;
+    height: 85vh;
+    // width: 100%;
     background-image: url("../assets/hero-image-2.png");
+    background-position: center;
     background-size: cover;
     display: flex;
     text-align: center;

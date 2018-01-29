@@ -249,19 +249,25 @@ button{
 
 .feature-container{
     display: flex;
+    font-size: 14px;
+    line-height: 1.5;
+    justify-content: space-around;
 }
 
 .features{
     padding: 23px;
-    flex-basis: 33.33%;
+    flex-basis: 32%;
     position: relative;
 }
 
-.features h4::before{
-    content:"-";
-    display: block;
-    background-image: url();
-}
+// .features h4::before{
+//     content:url("../assets/icon-lightbulb.png");
+    // display: block;
+    // max-width: 100%;
+    // position: relative;
+    // right: 100px;
+    // width: 17px;
+// }
 
 .circle-lg{
     width: 207px;
@@ -270,8 +276,8 @@ button{
     border-radius: 50%;
     z-index: -1;
     position: absolute;
-    top: 10px;
-    left: -50px;
+    top: 20px;
+    left: -40px;
 }
 
 // Pricing Section

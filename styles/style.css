@@ -168,7 +168,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 20px 0; }
+    padding: 20px 0;
+    font-size: 12px; }
 
 .contact,
 .genius-logo,
@@ -180,16 +181,46 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -ms-flex-align: center;
   align-items: center; }
 
+.genius-logo {
+  margin-right: 80px; }
+
 .contact i,
 .contact p {
   margin-left: 10px; }
 
-.user-controls p:first-child {
-  padding-right: 20px;
-  border-right: 1px solid white; }
+.user-controls a + a {
+  padding-left: 20px;
+  border-left: 1px solid white; }
 
 .user-controls a {
+  padding-right: 20px;
+  margin: 0;
   color: white; }
+
+.user-controls a p {
+  margin: 0; }
+
+@media (max-width: 768px) {
+  .logo-bar .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .genius-logo {
+    display: inline-block; }
+  .genius-logo {
+    -webkit-box-align: initial;
+    -ms-flex-align: initial;
+    align-items: initial; }
+  .contact,
+  .user-controls {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -ms-flex-item-align: end;
+    align-self: flex-end; } }
 
 .main-nav {
   border-top: 1px solid black; }
@@ -211,8 +242,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin-bottom: 138px; }
 
 .hero-section {
-  height: 90vh;
+  height: 85vh;
   background-image: url("../assets/hero-image-2.png");
+  background-position: center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,18 +476,17 @@ button {
 .feature-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  font-size: 14px;
+  line-height: 1.5;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .features {
   padding: 23px;
-  -ms-flex-preferred-size: 33.33%;
-  flex-basis: 33.33%;
+  -ms-flex-preferred-size: 32%;
+  flex-basis: 32%;
   position: relative; }
-
-.features h4::before {
-  content: "-";
-  display: block;
-  background-image: url(); }
 
 .circle-lg {
   width: 207px;
@@ -464,8 +495,8 @@ button {
   border-radius: 50%;
   z-index: -1;
   position: absolute;
-  top: 10px;
-  left: -50px; }
+  top: 20px;
+  left: -40px; }
 
 .pricing {
   margin-bottom: 111px; }
