@@ -1,12 +1,67 @@
-@import "components/header";
-@import "components/footer";
+$primarybackground: #f0f2f7;
+$maincolor: #222222;
+$secondarycolor: #666666;
+$highlight: #85bb42;
+$basefont:'Raleway', sans-serif;
+
+
+
+html{
+    font-size: 96.5%;
+}
 
 body{
-    background: red;
+    font-family: $basefont;
+    margin: 0;
+    padding: 0;
 }
+
+.wrapper{
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $maincolor;
+}
+
+img{
+    max-width: 100%;
+}
+
+@import "components/setup";
+@import "components/header";
+@import "components/main";
+@import "components/footer";
+
+
+// @mixin buttonStyle($font, $color) {
+//     font-size: $font;
+//     color: $highlight;
+//     font-weight: bold;
+//     background: none;
+//     border: none;
+// }
+
+
+// button {
+//     @include buttonStyle(14, purple);
+// }
 
 // Make the partial
 // Save the file
 // Delete the css
 // Imoprt the partial
 // Save style/scss
+

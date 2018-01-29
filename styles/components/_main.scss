@@ -1,0 +1,306 @@
+// Subtitle Plate
+
+.subtitle-plate{
+    text-align: center;
+    text-transform: uppercase;
+    h3{
+        font-weight: 400;
+        font-size: 17px;
+    }
+    h2{
+        margin: 20px 0;
+        font-size: 35px;
+    }
+}
+
+// Book Icon
+
+.course__book{
+    display: inline;
+}
+
+.course__book::before, 
+.course__book::after{
+    content: "";
+    border: 1px solid $highlight;
+    width: 25px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.course__book::before{
+    margin-right: 10px;
+}
+
+.course__book::after{
+    margin-left: 10px;
+}
+
+// Course Nav
+
+.course-nav{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    ul{
+        // width: 500px;
+        // display: flex;
+        // justify-content: space-between;
+    }
+    li{
+        display: inline-block;
+        padding: 0 10px;
+        // border: 1px solid red;
+        margin: 0;
+        a:hover{
+            color: $highlight;
+        }
+    }
+}
+
+// Course Gallery - 8 UP
+
+.course-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-bottom: 103px;
+}
+
+
+.gallery-item{
+    flex-basis: 270px;
+    margin: 10px 10px;
+        img{
+            display: block;
+        }
+}
+
+// Adding margins to images (except last of each row)
+
+.caption{
+    border: 1px solid lightgrey;
+    padding: 0 15px;
+}
+
+.client-profile{
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+h4{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.circle{
+    width: 42px;
+    height: 42px;
+    background: #b7b7b7;
+    border-radius: 50%;
+}
+
+.client-name p{
+    padding: 0;
+    margin: 0 10px;
+}
+
+// Client Name
+.client-name p:first-child{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+// View Profile
+.client-name p:nth-child(2){
+    color: $highlight;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.comment-link{
+    clear: both;
+}
+
+.comment-links p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.free{
+    color: $highlight;
+    float: right;
+}
+
+.comment-links .comment-data{
+    margin-right: 30px;
+}
+
+.comment-data p,
+.comment-data i{
+    float: left;
+    margin: 0 2px;
+    padding: 10px 0;
+}
+
+
+// Gallery 6 UP
+
+.gallery{
+    background: $primarybackground;
+    padding: 100px 0 103px 0;
+}
+
+.photo-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    margin-top: 80px;
+    div{
+        flex-basis: 390px;
+        margin-bottom: 20px;
+        img{
+            display: block;
+        }
+    }
+
+}
+
+// News Section
+
+
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin-bottom: 99px;
+    padding-top: 107px;
+}
+
+article{
+    display: flex;
+    background: $primarybackground;
+    height: 420px;
+    margin-top: 100px;
+}
+
+
+article:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.article__photo{
+    width: 500px;
+    position: relative;
+    bottom: 30px;
+    left: 30px;   
+}
+
+.article__text{
+    width: 50%;
+    margin: 0 auto;
+    float: right;
+
+}
+
+.news-sub{
+  padding: 20px;
+}
+
+.admin{
+    display: flex;
+}
+
+button{
+   border: 0;
+   background: $highlight;
+   text-transform: uppercase;
+   padding: 10px 30px;
+   color: white;
+   font-weight: 500;
+   align-self: flex-end;
+}
+
+// About Section
+
+.feature-container{
+    display: flex;
+}
+
+.features{
+    padding: 23px;
+    flex-basis: 400px;
+    position: relative;
+}
+
+.features h4::before{
+    content:"-";
+    display: block;
+    background-image: url();
+}
+
+.circle-lg{
+    width: 207px;
+    height: 207px;
+    background:#fafbfd;
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    top: 10px;
+    left: -50px;
+}
+
+// Pricing Section
+
+.pricing{
+    margin-bottom: 111px;
+}
+
+
+.trial-container{
+    display: flex;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    text-align: center;
+    .trial{
+        height: 594px;
+        flex-basis: 370px;
+        position: relative;
+        background: $primarybackground;
+        padding: 50px 10px;
+        .trial__list{
+            background: white;
+            height: 385px;
+            padding: 20px 0;
+            line-height: 3;
+            font-size: 14px;
+        }
+    }
+}
+
+.trial:hover .circle-price,
+.trial:hover{
+    background: $highlight;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+.circle-price{
+    height: 120px;
+    width: 120px;
+    border: 10px solid white;
+    border-radius: 50%;
+    background: $primarybackground;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+
