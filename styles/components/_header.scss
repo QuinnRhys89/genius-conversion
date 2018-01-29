@@ -4,18 +4,32 @@
     .wrapper{
         display: flex;
         justify-content: space-around;
+        padding: 20px 0;
     }
 }
 
 .genius-logo img{
-    display: block;
+
 }
 
 .contact,
 .genius-logo,
 .user-controls{
     display: flex;
+    align-items: center;
 }
+
+.contact i,
+.contact p{
+    margin-left: 10px;
+}
+
+.user-controls p:first-child{
+    padding-right: 20px;
+    border-right: 1px solid white;
+}
+
+
 
 .user-controls a{
     color: white;
@@ -31,7 +45,7 @@
     text-transform: uppercase;
     li{
         display: inline-block;
-        padding: 0 15px;
+        padding: 20px 15px;
     }
 }
 
@@ -43,7 +57,7 @@
 
 .hero-section{
     height: 90vh;
-    background-image: url("components/hero-image-2.png");
+    background-image: url("../assets/hero-image-2.png");
     background-size: cover;
     display: flex;
     text-align: center;

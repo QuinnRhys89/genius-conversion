@@ -61,9 +61,9 @@
 // Course Gallery - 8 UP
 
 .course-gallery{
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: flex-start; 
     margin-bottom: 103px;
 }
@@ -71,17 +71,35 @@
 
 .gallery-item{
     flex-basis: 270px;
+    // min-height: 450px;
     margin: 10px 10px;
         img{
             display: block;
+            width: 100%;
         }
 }
 
-// Adding margins to images (except last of each row)
+// Gallery Items - Responsive
+
+@media (max-width: 1288px) {
+    .gallery-item{
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 630px) {
+    .gallery-item{
+        flex-basis: 100%;
+    }
+}
+
 
 .caption{
     border: 1px solid lightgrey;
     padding: 0 15px;
+    h4{
+        min-height: 45px;
+    }
 }
 
 .client-profile{
@@ -158,17 +176,18 @@ h4{
 .photo-gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     align-content: flex-start;
     margin-top: 80px;
     div{
-        flex-basis: 390px;
+        flex: 1 0 390px;
+        padding-left: 20px;
         margin-bottom: 20px;
         img{
             display: block;
+            width: 100%;
         }
     }
-
 }
 
 // News Section
@@ -234,7 +253,7 @@ button{
 
 .features{
     padding: 23px;
-    flex-basis: 400px;
+    flex-basis: 33.33%;
     position: relative;
 }
 
@@ -264,13 +283,13 @@ button{
 
 .trial-container{
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 100px;
     text-align: center;
     .trial{
         height: 594px;
-        flex-basis: 370px;
+        flex-basis: 32%;
         position: relative;
         background: $primarybackground;
         padding: 50px 10px;
@@ -288,6 +307,18 @@ button{
 .trial:hover{
     background: $highlight;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1246px){
+    .trial-container .trial{
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 822px){
+     .trial-container{
+        flex-direction: column;
+    }
 }
 
 .circle-price{

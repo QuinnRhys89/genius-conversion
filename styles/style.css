@@ -167,17 +167,26 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
-    justify-content: space-around; }
-
-.genius-logo img {
-  display: block; }
+    justify-content: space-around;
+    padding: 20px 0; }
 
 .contact,
 .genius-logo,
 .user-controls {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.contact i,
+.contact p {
+  margin-left: 10px; }
+
+.user-controls p:first-child {
+  padding-right: 20px;
+  border-right: 1px solid white; }
 
 .user-controls a {
   color: white; }
@@ -196,14 +205,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   text-transform: uppercase; }
   .main-menu li {
     display: inline-block;
-    padding: 0 15px; }
+    padding: 20px 15px; }
 
 .about {
   margin-bottom: 138px; }
 
 .hero-section {
   height: 90vh;
-  background-image: url("components/hero-image-2.png");
+  background-image: url("../assets/hero-image-2.png");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,14 +274,14 @@ h1 {
       color: #85bb42; }
 
 .course-gallery {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -283,11 +292,24 @@ h1 {
   flex-basis: 270px;
   margin: 10px 10px; }
   .gallery-item img {
-    display: block; }
+    display: block;
+    width: 100%; }
+
+@media (max-width: 1288px) {
+  .gallery-item {
+    -ms-flex-preferred-size: calc(50% - 20px);
+    flex-basis: calc(50% - 20px); } }
+
+@media (max-width: 630px) {
+  .gallery-item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%; } }
 
 .caption {
   border: 1px solid lightgrey;
   padding: 0 15px; }
+  .caption h4 {
+    min-height: 45px; }
 
 .client-profile {
   display: -webkit-box;
@@ -351,17 +373,18 @@ h4 {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
   -ms-flex-line-pack: start;
   align-content: flex-start;
   margin-top: 80px; }
   .photo-gallery div {
-    -ms-flex-preferred-size: 390px;
-    flex-basis: 390px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 390px;
+    flex: 1 0 390px;
+    padding-left: 20px;
     margin-bottom: 20px; }
     .photo-gallery div img {
-      display: block; }
+      display: block;
+      width: 100%; }
 
 .news {
   display: -webkit-box;
@@ -425,8 +448,8 @@ button {
 
 .features {
   padding: 23px;
-  -ms-flex-preferred-size: 400px;
-  flex-basis: 400px;
+  -ms-flex-preferred-size: 33.33%;
+  flex-basis: 33.33%;
   position: relative; }
 
 .features h4::before {
@@ -451,6 +474,8 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -458,8 +483,8 @@ button {
   text-align: center; }
   .trial-container .trial {
     height: 594px;
-    -ms-flex-preferred-size: 370px;
-    flex-basis: 370px;
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
     position: relative;
     background: #f0f2f7;
     padding: 50px 10px; }
@@ -475,6 +500,17 @@ button {
   background: #85bb42;
   -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4); }
+
+@media (max-width: 1246px) {
+  .trial-container .trial {
+    margin-bottom: 100px; } }
+
+@media (max-width: 822px) {
+  .trial-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 .circle-price {
   height: 120px;
