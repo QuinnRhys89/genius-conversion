@@ -1,28 +1,35 @@
+// ****** FOOTER ****** 
+
 footer{
     padding-top: 70px;
     color: white;
     background: black;
 }
 
+.courses-list{
+    display: inline;
+}
+
+.courses-list a{
+    color: white;
+}
+
 .footer-container{
     display: flex;
+    justify-content: space-between;
 }
 
 .footer-column{
-    flex-basis: 25%;
-}
-
-.footer-column h4{
+    flex-basis: 23%;
+    font-size: 13px;
+    line-height: 2;
+    h4{
     padding: 0;
     margin-top: 0;
-}
-
-.footer-column a{
-    color: white;
-}
-
-.footer-bottom{
-    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    }
 }
 
 .footer-bottom nav,
@@ -33,5 +40,63 @@ footer{
 
 .footer-bottom ul li{
     display: inline;
-    padding: 0 10px;
+    padding: 0px 10px;
+}
+
+
+.genius span{
+    color:$highlight;
+}
+
+// Font Awesome Before Icons
+
+.genius ul li:before{
+    content:"\f00c";
+    font-family: FontAwesome;
+    display:inline-block;
+    margin-right: 10px;
+    color: $highlight;
+}
+
+.hawkins::before{
+    content:"\f041";
+    font-family: FontAwesome;
+    margin-right: 20px;
+    color: $highlight;
+}
+
+.phone::before{
+    content:"\f095";
+    font-family: FontAwesome;
+    margin-right: 20px;
+    color: $highlight;
+}
+
+.phone::before{
+    content:"\f095";
+    font-family: FontAwesome;
+    margin-right: 20px;
+    color: $highlight;
+}
+
+.mail::before{
+    content:"\f0e0";
+    font-family: FontAwesome;
+    margin-right: 20px;
+    color: $highlight;
+}
+
+// Form Input
+
+form{
+    display: flexbox;
+    input[type=text]{
+        border:0;
+        padding: 10px 20px;
+        border-radius: 5px 5px;
+    }
+    button{
+        padding: 10px 20px;
+        font-size: 18px;
+    }
 }

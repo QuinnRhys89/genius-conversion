@@ -1,17 +1,4 @@
-// Subtitle Plate
-
-.subtitle-plate{
-    text-align: center;
-    text-transform: uppercase;
-    h3{
-        font-weight: 400;
-        font-size: 17px;
-    }
-    h2{
-        margin: 20px 0;
-        font-size: 35px;
-    }
-}
+// ****** COURSES SECTION ****** 
 
 // Book Icon
 
@@ -42,15 +29,9 @@
     display: flex;
     justify-content: center;
     margin: 50px 0;
-    ul{
-        // width: 500px;
-        // display: flex;
-        // justify-content: space-between;
-    }
     li{
         display: inline-block;
         padding: 0 10px;
-        // border: 1px solid red;
         margin: 0;
         a:hover{
             color: $highlight;
@@ -69,30 +50,17 @@
 }
 
 
+// ****** GALLERY SECTION 8 UP ****** 
+
+
 .gallery-item{
     flex-basis: 270px;
-    // min-height: 450px;
     margin: 10px 10px;
         img{
             display: block;
             width: 100%;
         }
 }
-
-// Gallery Items - Responsive
-
-@media (max-width: 1288px) {
-    .gallery-item{
-        flex-basis: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 630px) {
-    .gallery-item{
-        flex-basis: 100%;
-    }
-}
-
 
 .caption{
     border: 1px solid lightgrey;
@@ -108,11 +76,6 @@
     border-bottom: 1px solid lightgrey;
 }
 
-h4{
-    font-size: 18px;
-    font-weight: 700;
-}
-
 .circle{
     width: 42px;
     height: 42px;
@@ -123,6 +86,7 @@ h4{
 .client-name p{
     padding: 0;
     margin: 0 10px;
+    color: #222;
 }
 
 // Client Name
@@ -140,33 +104,26 @@ h4{
     padding-top: 5px;
 }
 
-.comment-link{
-    clear: both;
-}
-
-.comment-links p{
-    margin: 0;
-    padding: 10px 0;
-}
-
-.free{
-    color: $highlight;
-    float: right;
-}
-
-.comment-links .comment-data{
-    margin-right: 30px;
+.comment-links,
+.comment-data{
+    display: flex;
+    align-items: center;
 }
 
 .comment-data p,
 .comment-data i{
-    float: left;
     margin: 0 2px;
     padding: 10px 0;
+    align-items: center;
+}
+
+.free{
+    color: $highlight;
 }
 
 
-// Gallery 6 UP
+
+// ****** GALLERY SECTION 6 UP ****** 
 
 .gallery{
     background: $primarybackground;
@@ -176,7 +133,6 @@ h4{
 .photo-gallery{
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
     align-content: flex-start;
     margin-top: 80px;
     div{
@@ -190,7 +146,7 @@ h4{
     }
 }
 
-// News Section
+// ****** NEWS SECTION ****** 
 
 
 .news{
@@ -204,48 +160,63 @@ h4{
 article{
     display: flex;
     background: $primarybackground;
-    height: 420px;
     margin-top: 100px;
 }
-
 
 article:hover{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .article__photo{
-    width: 500px;
+    width: 50%;
     position: relative;
     bottom: 30px;
-    left: 30px;   
+    left: 30px; 
+    margin-right: 3%;
+    img{
+        width: 100%;
+    }  
 }
 
 .article__text{
     width: 50%;
     margin: 0 auto;
     float: right;
-
+    padding-top: 50px; 
+    h4{
+        font-size: 24px;
+    }
 }
 
 .news-sub{
-  padding: 20px;
+    padding: 20px;
+    height: 100%;
+    h4{
+    margin: 0 0 20px 0;
+    }
 }
 
 .admin{
     display: flex;
+    p{
+    padding: 0;
+    }
 }
 
-button{
-   border: 0;
-   background: $highlight;
-   text-transform: uppercase;
-   padding: 10px 30px;
-   color: white;
-   font-weight: 500;
-   align-self: flex-end;
+.description{
+    font-size: 14px;
+    line-height: 1.6;
+    color: $secondarycolor;
+    margin-bottom: 56px;
 }
 
-// About Section
+// ****** ABOUT SECTION ****** 
+
+.about{
+    background: $primarybackground;
+    padding: 93px 0 120px 0;
+}
+
 
 .feature-container{
     display: flex;
@@ -255,32 +226,34 @@ button{
 }
 
 .features{
-    padding: 23px;
-    flex-basis: 32%;
+    padding: 23px 0;
+    flex-basis: 30%;
     position: relative;
+    z-index: 1;
 }
 
-// .features h4::before{
-//     content:url("../assets/icon-lightbulb.png");
-    // display: block;
-    // max-width: 100%;
-    // position: relative;
-    // right: 100px;
-    // width: 17px;
-// }
+.icon{
+    position: absolute;
+    left: -40px;
+    top: 50px;
+}
 
 .circle-lg{
     width: 207px;
     height: 207px;
-    background:#fafbfd;
+    background: #fafbfd;
     border-radius: 50%;
     z-index: -1;
     position: absolute;
-    top: 20px;
-    left: -40px;
+    top: 10px;
+    left: -60px;
 }
 
-// Pricing Section
+.features{
+    width: 70%;
+}
+
+// ****** PRICING SECTION ****** 
 
 .pricing{
     margin-bottom: 111px;
@@ -315,18 +288,6 @@ button{
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 1246px){
-    .trial-container .trial{
-        margin-bottom: 100px;
-    }
-}
-
-@media (max-width: 822px){
-     .trial-container{
-        flex-direction: column;
-    }
-}
-
 .circle-price{
     height: 120px;
     width: 120px;
@@ -337,7 +298,16 @@ button{
     top: -70px;
     left: 50%;
     transform: translate(-50%, 0);
+}
 
+.sale{
+    font-size: 38px;
+    font-weight: 700;
+    position: relative;
+    top: -15px;
+    span{
+        font-size: 20px;
+    }
 }
 
 
